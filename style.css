@@ -129,9 +129,9 @@ main {
 }
 
 .page-home .site-header {
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  border-bottom: none;
+  backdrop-filter: none;
   transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
@@ -596,9 +596,8 @@ main {
 }
 
 .page-home .footer {
-  background: linear-gradient(180deg, rgba(12, 58, 82, 0.1), rgba(12, 58, 82, 0));
-  border-top: 1px solid rgba(12, 58, 82, 0.08);
-  backdrop-filter: blur(8px);
+  background: transparent;
+  border-top: 1px solid rgb(255, 255, 255);
 }
 
 .footer-grid {
@@ -958,6 +957,12 @@ textarea {
     gap: 8px;
     display: none;
     box-shadow: var(--shadow-soft);
+  }
+
+  .page-home .nav-links {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .nav-links.open {
