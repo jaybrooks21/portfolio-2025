@@ -1,4 +1,100 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const navItems = [
+    { key: 'home', label: 'Home', href: 'index.html' },
+    { key: 'case-studies', label: 'Case Studies', href: 'case-studies.html' },
+    { key: 'creative-lab', label: 'Creative Lab', href: 'creative-lab.html' },
+    { key: 'photography', label: 'Photography', href: 'photography.html' },
+    { key: 'collab', label: "Let's Collab", href: 'collab.html' },
+  ];
+
+  const navLinksMarkup = navItems
+    .map(item => `<a href="${item.href}" data-nav-item="${item.key}">${item.label}</a>`)
+    .join('');
+
+  const footerLinksMarkup = navItems
+    .map(item => `<p><a href="${item.href}">${item.label}</a></p>`)
+    .join('');
+
+  const headerMarkup = `
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            Jaylynn Brooks
+            <small>Creative Strategic Designer</small>
+          </span>
+        </a>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+        <div class="nav-links" data-nav-links>
+          ${navLinksMarkup}
+        </div>
+      </div>
+    </header>
+  `.trim();
+
+  const footerMarkup = `
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>Jaylynn Brooks</h4>
+          <p>Creative Strategic Designer</p>
+        </div>
+
+        <div>
+          <h4>Pages</h4>
+          ${footerLinksMarkup}
+        </div>
+
+        <div class="cta-copy">
+          <h3>Let's build something intentional.</h3>
+          <p>Show me the challenge, the people involved, and what success looks like. I'll respond with a tailored
+            approach and a quick moodboard idea.</p>
+          <a class="btn btn-primary" href="collab.html">Let's Collab</a>
+        </div>
+      </div>
+    </footer>
+  `.trim();
+
+  const headerSlot = document.querySelector('[data-site-header]');
+  if (headerSlot) {
+    headerSlot.outerHTML = headerMarkup;
+  }
+
+  const footerSlot = document.querySelector('[data-site-footer]');
+  if (footerSlot) {
+    footerSlot.outerHTML = footerMarkup;
+  }
+
+  const resolveActiveKey = () => {
+    const explicit = document.body.getAttribute('data-nav-active');
+    if (explicit) return explicit;
+    const path = window.location.pathname.split('/').pop();
+    if (!path || path === 'index.html') return 'home';
+    if (path === 'case-studies.html') return 'case-studies';
+    if (path === 'creative-lab.html') return 'creative-lab';
+    if (path === 'photography.html') return 'photography';
+    if (path === 'collab.html') return 'collab';
+    if (path.startsWith('case-study-')) return 'case-studies';
+    const caseStudyPages = new Set([
+      'ai-travel-agent.html',
+      'peak-pursuits.html',
+      'sustainable-sparks.html',
+      'wavemakers.html',
+    ]);
+    if (caseStudyPages.has(path)) return 'case-studies';
+    return null;
+  };
+
+  const activeKey = resolveActiveKey();
+  if (activeKey) {
+    const activeLink = document.querySelector(`.nav-links [data-nav-item="${activeKey}"]`);
+    if (activeLink) {
+      activeLink.classList.add('active');
+      activeLink.setAttribute('aria-current', 'page');
+    }
+  }
+
   // Header scroll effect
   const header = document.querySelector('.site-header');
   if (header) {
