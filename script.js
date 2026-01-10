@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="container nav">
         <a class="brand" href="index.html">
           <span class="brand-text">
-            Jaylynn Brooks
-            <small>Digital Experience & Web Coordination</small>
+            Jay's Creative Lab
+            <small>Digital Experience & Website Coordinator</small>
           </span>
         </a>
         <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">Menu</button>
@@ -32,27 +32,23 @@ document.addEventListener('DOMContentLoaded', () => {
     <footer class="footer">
       <div class="container footer-grid">
         <div class="footer-block">
-          <h4>Jaylynn Brooks</h4>
-          <h5>Digital Experience & Web Coordination</h5>
-          <h5>Work rooted in care, clarity, and respect</h5>
+          <h4><a href="index.html">Jay's Creative Lab</a></h4>
+          <h5>Digital Experience & Website Coordinator</h5>
+          <h5>Work Rooted in Care, Clarity, and Respect</h5>
         </div>
 
         <div class="footer-block">
-          <h4>Navigation</h4>
-          <p><a href="case-studies.html">Projects</a></p>
-          <p><a href="index.html#impact">About</a></p>
-          <p><a href="collab.html">Contact</a></p>
+          <h4>Work</h4>
+          <p><a href="case-studies.html">Case Studies</a></p>
+          <p><a href="photography.html">Photography</a></p>
+          <p><a href="creative-lab.html">Creative Lab</a></p>
         </div>
 
         <div class="footer-block">
           <h4>Contact</h4>
-          <p>Email address</p>
-          <p>LinkedIn</p>
-        </div>
-
-        <div class="footer-block">
-          <h4>Location</h4>
-          <p>Based in Canada</p>
+           <p><a href="https://www.linkedin.com/in/jaylynnbrooks/">Linked In</a></p>
+           <p><a href="collab.html">Let's Work Together</a></p>
+          <p>Based in Toronto</p>
         </div>
       </div>
 
