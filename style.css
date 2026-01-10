@@ -84,7 +84,7 @@ main {
   margin-bottom: 40px;
 }
 
-#impact .impact-divider {
+.impact-divider {
   height: 1px;
   margin-top: 32px;
   background: rgba(12, 58, 82, 0.2);
