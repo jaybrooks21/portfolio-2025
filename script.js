@@ -32,26 +32,31 @@ document.addEventListener('DOMContentLoaded', () => {
     <footer class="footer">
       <div class="container footer-grid">
         <div class="footer-block">
-          <h4><a href="index.html">Jay's Creative Lab</a></h4>
-          <h5>Digital Experience & Website Coordinator</h5>
-          <h5>Work Rooted in Care, Clarity, and Respect</h5>
+          <h4><a href="index.html">Jaylynn Brooks</a></h4>
+          <p class="footer-highlight">Digital Experience & Web Coordination</p>
         </div>
 
         <div class="footer-block">
-          <h4>Work</h4>
-          <p><a href="case-studies.html">Case Studies</a></p>
-          <p><a href="photography.html">Photography</a></p>
-          <p><a href="creative-lab.html">Creative Lab</a></p>
+          <h4>Navigation</h4>
+          <p><a href="case-studies.html">Projects</a></p>
+          <p><a href="index.html#impact">About</a></p>
+          <p><a href="collab.html">Contact</a></p>
         </div>
 
         <div class="footer-block">
           <h4>Contact</h4>
-           <p><a href="https://www.linkedin.com/in/jaylynnbrooks/">Linked In</a></p>
-           <p><a href="collab.html">Let's Work Together</a></p>
-          <p>Based in Toronto</p>
+          <p>Email address</p>
+          <p><a href="https://www.linkedin.com/in/jaylynnbrooks/">LinkedIn</a></p>
+        </div>
+
+        <div class="footer-block">
+          <h4>Location</h4>
+          <p>Based in Canada</p>
         </div>
       </div>
-
+      <div class="container footer-note">
+        <small>Digital work rooted in care, clarity, and respect.</small>
+      </div>
     </footer>
   `.trim();
 

@@ -257,8 +257,8 @@ main {
 
 .page-home .hero::before {
   display: block;
-  background: url("hero-images/beach-colombia.jpg") center/cover no-repeat;
-  opacity: 0.4;
+  background: url("hero-images/bridge.jpg") center/cover no-repeat;
+  opacity: 0.5;
 }
 
 .hero .container {
@@ -627,7 +627,7 @@ main {
 
 .footer-note {
   margin-top: 20px;
-  color: var(--color-teal);
+  color: #000;
   font-size: 0.85rem;
 }
 
@@ -640,6 +640,10 @@ main {
 .footer p {
   margin: 0 0 8px;
   color: var(--color-teal);
+}
+
+.footer-highlight {
+  color: #000;
 }
 
 .footer a:hover {
