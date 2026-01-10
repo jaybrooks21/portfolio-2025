@@ -11,18 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     .map(item => `<a href="${item.href}" data-nav-item="${item.key}">${item.label}</a>`)
     .join('');
 
-  const footerLinksMarkup = navItems
-    .map(item => `<p><a href="${item.href}">${item.label}</a></p>`)
-    .join('');
-
   const headerMarkup = `
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="index.html">
-          <span class="logo-mark" aria-hidden="true"></span>
           <span class="brand-text">
             Jaylynn Brooks
-            <small>Creative Strategic Designer</small>
+            <small>Digital Experience & Web Coordination</small>
           </span>
         </a>
         <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">Menu</button>
@@ -36,23 +31,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const footerMarkup = `
     <footer class="footer">
       <div class="container footer-grid">
-        <div>
+        <div class="footer-block">
           <h4>Jaylynn Brooks</h4>
-          <p>Creative Strategic Designer</p>
+          <h5>Digital Experience & Web Coordination</h5>
+          <h5>Work rooted in care, clarity, and respect</h5>
         </div>
 
-        <div>
-          <h4>Pages</h4>
-          ${footerLinksMarkup}
+        <div class="footer-block">
+          <h4>Navigation</h4>
+          <p><a href="case-studies.html">Projects</a></p>
+          <p><a href="index.html#impact">About</a></p>
+          <p><a href="collab.html">Contact</a></p>
         </div>
 
-        <div class="cta-copy">
-          <h3>Let's build something intentional.</h3>
-          <p>Show me the challenge, the people involved, and what success looks like. I'll respond with a tailored
-            approach and a quick moodboard idea.</p>
-          <a class="btn btn-primary" href="collab.html">Let's Collab</a>
+        <div class="footer-block">
+          <h4>Contact</h4>
+          <p>Email address</p>
+          <p>LinkedIn</p>
+        </div>
+
+        <div class="footer-block">
+          <h4>Location</h4>
+          <p>Based in Canada</p>
         </div>
       </div>
+
     </footer>
   `.trim();
 

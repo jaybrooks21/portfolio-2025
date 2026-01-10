@@ -80,6 +80,16 @@ main {
   padding: 72px 0;
 }
 
+#impact .impact-block {
+  margin-bottom: 40px;
+}
+
+#impact .impact-divider {
+  height: 1px;
+  margin-top: 32px;
+  background: rgba(12, 58, 82, 0.2);
+}
+
 .section-heading {
   display: flex;
   flex-direction: column;
@@ -117,6 +127,10 @@ main {
 .section-heading p {
   margin: 0;
   color: var(--color-teal);
+}
+
+.case-studies-intro {
+  color: #000;
 }
 
 .site-header {
@@ -242,7 +256,9 @@ main {
 }
 
 .page-home .hero::before {
-  display: none;
+  display: block;
+  background: url("hero-images/beach-colombia.jpg") center/cover no-repeat;
+  opacity: 0.4;
 }
 
 .hero .container {
@@ -605,8 +621,14 @@ main {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
+}
+
+.footer-note {
+  margin-top: 20px;
+  color: var(--color-teal);
+  font-size: 0.85rem;
 }
 
 .footer h4 {
@@ -970,6 +992,10 @@ textarea {
 
   .nav-links.open {
     display: flex;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
   }
 
   .case-card {
