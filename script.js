@@ -206,6 +206,16 @@ document.addEventListener('DOMContentLoaded', () => {
   let lightboxGroup = [];
   let lightboxIndex = -1;
 
+  const blockImageSave = (img) => {
+    img.setAttribute('draggable', 'false');
+    img.addEventListener('contextmenu', (event) => event.preventDefault());
+    img.addEventListener('dragstart', (event) => event.preventDefault());
+  };
+
+  if (lightboxImg) {
+    blockImageSave(lightboxImg);
+  }
+
   const renderLightbox = () => {
     if (!lightbox || !lightboxImg) return;
     const current = lightboxGroup[lightboxIndex];
@@ -243,6 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   document.querySelectorAll('[data-lightbox-img]').forEach((img, idx, all) => {
+    blockImageSave(img);
     img.style.cursor = 'zoom-in';
     img.addEventListener('click', () => {
       const groupName = img.getAttribute('data-lightbox-group');
